@@ -1,10 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>AddressBook || Testimonials</title>
 </head>
 <body>
-$END$
+<div th:fragment="testimonials">
+    <!-- Testimonials Start -->
+    <section class="section bg-grey" id="testimonials">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8">
+                    <div class="text-center mb-5">
+                        <h2 class="highlight text-uppercase mb-3 header-colorize">CONTACTS</h2>
+                        <p class="text-sub size-14">Quickly Connect With Your Favorite Contacts</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-9 col-center m-auto">
+
+
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item carousel-item active">
+                                <div class="img-box"><img src="../images/client.jpg" alt=""></div>
+                                <p class="testimonial">"Send Mail ang Møte på Fredag 13.09. Må flyttes til 13.30, da du
+                                    har et annet møte og reisetid. Husk å finne frem presentasjonen ons innen 10.09.
+                                    Presentasjonen mangler Teknisk Brief og Competitor Analysis"</p>
+                                <p class="overview"><b>Kathinka Botn</b>, Growth Hacker</p>
+                            </div>
+                            <div class="item carousel-item">
+                                <div class="img-box"><img src="../images/client2.jpg" alt=""></div>
+                                <p class="testimonial">"Gi tilgang til Repo innen man 08.09, slik at Hilde kan
+                                    implementere sin feature. Husk å sende henne full prosjekt beskrivelse og gi tilgang
+                                    til prosjektfiler inkl Drive, Slack og Trello. Note to Self : Du må ferdigstille
+                                    alle dox og presentabel, ryddig og oversiktlig kode!! "</p>
+                                <p class="overview"><b>Hilde Gomez</b>, App Developer</p>
+                            </div>
+                            <div class="item carousel-item">
+                                <div class="img-box"><img src="../images/client3.jpg" alt=""></div>
+                                <p class="testimonial">"Skriv en kick-ass Presentasjon innen møte 01.10. Sykt viktig at
+                                    alt er med all grafikk, mockups, statestikk, flowcharts, detaljert Business Case +++
+                                    Nail it!! "</p>
+                                <p class="overview"><b>Christian Larsen</b>, CEO, TechTools</p>
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+                        <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials End -->
+</div>
+<!-- JS Scripts Start-->
+<!-- JavaScript Bundle with Popper -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/scrollspy.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>

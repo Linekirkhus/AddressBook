@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>AddressBook || Projects</title>
 </head>
 <body>
-$END$
+
+<div th:fragment="projects">
+    <!-- Projects Start -->
+    <Section class="section accomplished-counter-bg">
+        <div class="accomplished-counter-bg"></div>
+        <div class="container">
+            <div class="row align-items-center" id="accomplished-counter">
+                <div class="col-lg-3 col-md-6">
+                    <div class="accomplished-counter-box text-center px-4 py-5 mb-4 mb-lg-0">
+                        <div class="text-white">
+                            <i class="far fa-window-maximize accomplished-counter-icon mx-auto"></i>
+                            <h1 class="mb-2 mt-3"><span class="accomplished-counter-value mt-4" counter="90">0</span>+
+                            </h1>
+                            <p class="mb-0 text-white-70">Websites</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="accomplished-counter-box text-center mb-4 mb-lg-0 px-4 py-5">
+                        <div class="text-white">
+                            <i class="far fa-window-restore accomplished-counter-icon mx-auto"></i>
+                            <h1 class="mb-2 mt-3"><span class="accomplished-counter-value mt-4" counter="82">0</span>+
+                            </h1>
+                            <p class="mb-0 text-white-70">Applications</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="accomplished-counter-box text-center mb-4 mb-lg-0 px-4 py-5">
+                        <div class="text-white">
+                            <i class="fas fa-mobile-alt accomplished-counter-icon mx-auto"></i>
+                            <h1 class="mb-2 mt-3"><span class="accomplished-counter-value mt-4" counter="15">0</span>
+                            </h1>
+                            <p class="mb-0 text-white-70">Mobile Apps</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="accomplished-counter-box text-center mb-4 mb-lg-0 px-4 py-5">
+                        <div class="text-white">
+                            <i class="far fa-smile-beam accomplished-counter-icon mx-auto"></i>
+                            <h1 class="mb-2 mt-3"><span class="accomplished-counter-value mt-4" counter="187">0</span>
+                            </h1>
+                            <p class="mb-0 text-white-70">Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Section>
+    <!-- Projects End -->
+</div>
 </body>
 </html>

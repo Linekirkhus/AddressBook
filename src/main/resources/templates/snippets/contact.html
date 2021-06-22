@@ -1,10 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>AddressBook || Contact</title>
 </head>
 <body>
-$END$
+
+
+<div th:fragment="contact">
+
+    <!-- Contact Start -->
+    <section class="section" id="new_addressbook_contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8">
+                    <div class="text-center mb-5">
+                        <h2 id="addcontact-h2" class="highlight header-colorize text-uppercase mb-3">Add A New
+                            Contact</h2>
+                        <p id="addcontact-p" class="size-14">Add Your Contact Hit Save, and your New contact will be
+                            stored Just Like That!.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 offset-lg-1">
+                        <div class="custom-form mt-4 mt-lg-0">
+                            <form action="#" th:action="@{/saveContact}" th:object="${person}" method="POST"
+                                  class="box">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group add-contact-form-fields">
+                                            <label for="firstname">First Name:</label>
+                                            <input type="text" th:field="*{firstName}" class="form-control mb-4 col-4"
+                                                   id="firstname"
+                                                   placeholder="Enter Your First Name.."/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 add-contact-form-fields">
+                                        <div class="form-group">
+                                            <label for="lastname">First Name:</label>
+                                            <input type="text" th:field="*{lastName}" class="form-control mb-4 col-4"
+                                                   id="lastname"
+                                                   placeholder="Enter Your Last Name.."/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 add-contact-form-fields">
+                                        <div class="form-group">
+                                            <label for="email">Email:</label>
+                                            <input type="email" th:field="*{email}" class="form-control mb-4 col-4"
+                                                   id="email"
+                                                   placeholder="Enter Your Email.."/>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group add-contact-form-fields">
+                                            <label for="phonenumber">Phone Number:</label>
+                                            <input type="text" th:field="*{phoneNumber}" class="form-control mb-4 col-4"
+                                                   id="phonenumber"
+                                                   placeholder="Enter Your Phone Number.."/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <button type="submit" href="" id="save-contact-btn"
+                                                class="btn btn-primary"><span
+                                                class="mr-2 left-icon"><i
+                                                class="fas fa-envelope"></i></span>Save Contact
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--add contact End -->
+</div>
+
+    <!-- contact End -->
+<!-- JS Scripts Start-->
+<!-- JavaScript Bundle with Popper -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/scrollspy.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>

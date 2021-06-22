@@ -1,10 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>AddressBook || Edit Form </title>
 </head>
 <body>
-$END$
+
+<!-- EDIT CONTACTS -->
+<div th:fragment="editcontact">
+  <!-- Edit Contact Start -->
+  <section class="section" id="editcontact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+          <div class="text-center mb-5">
+            <h2 id="editcontact-h2" class="highlight header-colorize text-uppercase mb-3">Add A New
+              Contact</h2>
+            <p id="editcontact-p" class="size-14">Edit Your Contact & Hit Save <br> You Can Edit As Many
+              Times You Need & Want to So don´t you worry about Missspellliingss or Silly Little Things
+              Like That.. <br> We´ve Got ur Back!</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 offset-lg-1">
+            <div class="custom-form mt-4 mt-lg-0">
+              <form action="#" th:action="@{/saveContact}" th:object="${person}" method="POST"
+                    class="box">
+                <div class="row">
+
+                  <input type="hidden" th:field="*{id}"/>
+
+                  <div class="col-lg-12">
+                    <div class="form-group add-contact-form-fields">
+                      <label for="editfirstname">Edit First Name:</label>
+                      <input type="text" th:field="*{firstName}" class="form-control mb-4 col-4"
+                             id="editfirstname"
+                             placeholder="Enter Your First Name.."/>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 add-contact-form-fields">
+                    <div class="form-group">
+                      <label for="editlastname">Edit Last Name:</label>
+                      <input type="text" th:field="*{lastName}" class="form-control mb-4 col-4"
+                             id="editlastname"
+                             placeholder="Enter Your Last Name.."/>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 add-contact-form-fields">
+                    <div class="form-group">
+                      <label for="editemail">Edit Email:</label>
+                      <input type="email" th:field="*{email}" class="form-control mb-4 col-4"
+                             id="editemail"
+                             placeholder="Enter Your Email.."/>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <div class="form-group add-contact-form-fields">
+                      <label for="editphonenumber">Edit Phone Number:</label>
+                      <input type="text" th:field="*{phoneNumber}" class="form-control mb-4 col-4"
+                             id="editphonenumber"
+                             placeholder="Enter Your Phone Number.."/>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <button type="submit" href="" id="edit-contact-btn"
+                            class="btn btn-primary"><span
+                            class="mr-2 left-icon"><i
+                            class="fas fa-envelope"></i></span>Update Contact
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- EDIT contact End -->
+</div>
 </body>
 </html>

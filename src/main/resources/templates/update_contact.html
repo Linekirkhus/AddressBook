@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head th:replace="snippets/head :: head">
+    <meta charset="UTF-8">
+    <title>AddressBook || Update Contact</title>
 </head>
 <body>
-$END$
+<div id="editcontactpage">
+    <div th:replace="snippets/navbar :: navbar"></div>
+    <div th:replace="snippets/editcontact :: editcontact"></div>
+</div>
+<div th:replace="snippets/footer :: footer"></div>
+
+<!-- JS Scripts Start-->
+<!-- JavaScript Bundle with Popper -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/scrollspy.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/main.js"></script>
+
 </body>
 </html>
